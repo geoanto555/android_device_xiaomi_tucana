@@ -1,0 +1,2 @@
+add_lunch_combo omni_tucana-eng
+add_lunch_combo omni_tucana-userdebug
