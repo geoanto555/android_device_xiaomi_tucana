@@ -12,7 +12,6 @@
 /system_image  emmc    /dev/block/bootdevice/by-name/system
 /vendor_image  emmc    /dev/block/bootdevice/by-name/vendor
 /data          f2fs    /dev/block/bootdevice/by-name/userdata                  flags=fileencryption=ice:aes-256-cts;wrappedkey
-/metadata      ext4    /dev/block/bootdevice/by-name/metadata                  flags=display="Metadata"
 /firmware      vfat    /dev/block/bootdevice/by-name/modem                     flags=display="Firmware";mounttodecrypt
 /cust          ext4    /dev/block/bootdevice/by-name/cust                      flags=display="Cust"
 /misc          emmc    /dev/block/bootdevice/by-name/misc
@@ -33,7 +32,6 @@
 /rpm		    emmc	/dev/block/bootdevice/by-name/rpm	                   flags=display="rpm";backup=1
 /keymaster	    emmc	/dev/block/bootdevice/by-name/keymaster	               flags=display="keymaster";backup=1
 /devcfg		    emmc	/dev/block/bootdevice/by-name/devcfg	               flags=display="devcfg";backup=1
-/dsp            ext4    /dev/block/bootdevice/by-name/dsp                      flags=display="dsp";backup=1
 /devinfo        emmc    /dev/block/bootdevice/by-name/devinfo                  flags=display="devinfo";backup=1
 /switch         emmc    /dev/block/bootdevice/by-name/switch                   flags=display="switch";backup=1
 /dpo            emmc    /dev/block/bootdevice/by-name/dpo                      flags=display="dpo";backup=1
@@ -93,7 +91,6 @@
 /oops           emmc    /dev/block/bootdevice/by-name/oops                     flags=backup=1
 /dtbobak        emmc    /dev/block/bootdevice/by-name/dtbobak                  flags=backup=1
 /mdtpbak        emmc    /dev/block/bootdevice/by-name/mdtpbak                  flags=backup=1
-/dspbak         ext4    /dev/block/bootdevice/by-name/dspbak                   flags=backup=1
 /persistbak     ext4    /dev/block/bootdevice/by-name/persistbak               flags=backup=1
 /logo           emmc    /dev/block/bootdevice/by-name/logo                     flags=backup=1;flashimg=1
 /bootbak        emmc    /dev/block/bootdevice/by-name/bootbak                  flags=backup=1
