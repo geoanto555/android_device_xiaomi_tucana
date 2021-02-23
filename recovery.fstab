@@ -7,13 +7,14 @@
 /dtbo          emmc    /dev/block/bootdevice/by-name/dtbo                      flags=backup=1;display="Dtbo";flashimg=1
 /cache         ext4    /dev/block/bootdevice/by-name/cache
 /recovery      emmc    /dev/block/bootdevice/by-name/recovery                  flags=backup=1
-/system_root   ext4    /dev/block/bootdevice/by-name/system                    flags=display="System";backup=0
-/vendor        ext4    /dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui
-/system_image  emmc    /dev/block/bootdevice/by-name/system
-/vendor_image  emmc    /dev/block/bootdevice/by-name/vendor
+/system_root   ext4    /dev/block/bootdevice/by-name/system                    flags=display="System";backup=1
+/vendor        ext4    /dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=1;wipeingui
+/system_image  emmc    /dev/block/bootdevice/by-name/system                    flags=display="System Image";backup=0;flashimg=1
+/vendor_image  emmc    /dev/block/bootdevice/by-name/vendor                    flags=display="Vendor Image";backup=0;flashimg=1
 /data          f2fs    /dev/block/bootdevice/by-name/userdata                  flags=fileencryption=ice:aes-256-cts;wrappedkey
 /firmware      vfat    /dev/block/bootdevice/by-name/modem                     flags=display="Firmware";mounttodecrypt
-/cust          ext4    /dev/block/bootdevice/by-name/cust                      flags=display="Cust"
+/cust          ext4    /dev/block/bootdevice/by-name/cust                      flags=display="Cust";backup=1
+/cust_image    ext4    /dev/block/bootdevice/by-name/cust                      flags=display="Cust Image";flashimg=1
 /misc          emmc    /dev/block/bootdevice/by-name/misc
 /modem         emmc    /dev/block/bootdevice/by-name/modem                     flags=backup=1;display="Modem"
 /bluetooth     emmc    /dev/block/bootdevice/by-name/bluetooth                 flags=backup=1;subpartitionof=/modem
@@ -25,13 +26,13 @@
 /persist       ext4    /dev/block/bootdevice/by-name/persist                   flags=display="Persist";backup=1;wipeingui
 /persist_image emmc    /dev/block/bootdevice/by-name/persist                   flags=display="Persist";flashimg=1
 #Test partitions
-/abl            emmc    /dev/block/bootdevice/by-name/abl                      flags=display="abl";backup=1
-/cmnlib		    emmc	/dev/block/bootdevice/by-name/cmnlib                   flags=display="cmnlib";backup=1
-/hyp		    emmc	/dev/block/bootdevice/by-name/hyp                      flags=display="hyp";backup=1
-/tz		        emmc	/dev/block/bootdevice/by-name/tz                       flags=display="tz";backup=1
-/rpm		    emmc	/dev/block/bootdevice/by-name/rpm	                   flags=display="rpm";backup=1
-/keymaster	    emmc	/dev/block/bootdevice/by-name/keymaster	               flags=display="keymaster";backup=1
-/devcfg		    emmc	/dev/block/bootdevice/by-name/devcfg	               flags=display="devcfg";backup=1
+/abl           emmc    /dev/block/bootdevice/by-name/abl                      flags=display="abl";backup=1
+/cmnlib		     emmc	   /dev/block/bootdevice/by-name/cmnlib                   flags=display="cmnlib";backup=1
+/hyp		       emmc    /dev/block/bootdevice/by-name/hyp                      flags=display="hyp";backup=1
+/tz		         emmc	   /dev/block/bootdevice/by-name/tz                       flags=display="tz";backup=1
+/rpm		       emmc	   /dev/block/bootdevice/by-name/rpm	                   flags=display="rpm";backup=1
+/keymaster	    emmc	 /dev/block/bootdevice/by-name/keymaster	               flags=display="keymaster";backup=1
+/devcfg		      emmc	/dev/block/bootdevice/by-name/devcfg	               flags=display="devcfg";backup=1
 /devinfo        emmc    /dev/block/bootdevice/by-name/devinfo                  flags=display="devinfo";backup=1
 /switch         emmc    /dev/block/bootdevice/by-name/switch                   flags=display="switch";backup=1
 /dpo            emmc    /dev/block/bootdevice/by-name/dpo                      flags=display="dpo";backup=1
